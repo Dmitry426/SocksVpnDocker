@@ -1,0 +1,10 @@
+services:
+  shadowsocks:
+    image: shadowsocks/shadowsocks-libev:v3.3.5
+    ports:
+      - "8388:8388/tcp"
+      - "8388:8388/udp"
+    environment:
+      - METHOD=${METHOD}
+      - PASSWORD=${PASSWORD}
+    restart: always
